@@ -96,6 +96,10 @@ class App extends Component {
           {({ mutation }) => <AddTodo onCreate={mutation} />}
         </Connect>
 
+        <Connect mutation={graphqlOperation(mutations.createTodo)}>
+          test: {onCreate}
+        </Connect>
+
         <Connect
           query={graphqlOperation(queries.listTodos)}
           subscription={graphqlOperation(subscriptions.onCreateTodo)}
