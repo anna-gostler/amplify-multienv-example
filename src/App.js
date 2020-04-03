@@ -13,7 +13,7 @@ Amplify.configure(awsConfig);
 
 const ListView = ({ todos }) => (
   <div>
-    <h2>All Todos</h2>
+    <h2>List of Todos</h2>
     <ul>
       {todos.map(todo => (
         <li key={todo.id}>
