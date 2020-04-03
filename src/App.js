@@ -87,6 +87,8 @@ class AddTodo extends Component {
   }
 }
 
+/* ISSUE: "Validation error of type MissingFieldArgument: Missing field argument owner @ 'onCreateTodo'"*/
+
 class App extends Component {
   render() {
     return (
@@ -94,10 +96,6 @@ class App extends Component {
         <h2>Add Todo</h2>
         <Connect mutation={graphqlOperation(mutations.createTodo)}>
           {({ mutation }) => <AddTodo onCreate={mutation} />}
-        </Connect>
-
-        <Connect mutation={graphqlOperation(mutations.createTodo)}>
-          test: {onCreate}
         </Connect>
 
         <Connect
